@@ -1,0 +1,526 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>Cửa hàng bán đồ gia dụng Thanh Tùng</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="js/startstop-slider.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="headertop_desc">
+                <div class="call">
+                    <p><span>Bạn cần hỗ trợ?</span> liên hệ chúng tôi <span class="number">012345678</span></span>
+                    </p>
+                </div>
+                <div class="account_desc">
+                    <ul>
+                        <li><a href="#">Đăng ký</a></li>
+                        <li><a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập</a></li>
+                        <li><a href="cart.html">Giỏ hàng</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <!-- modal đăng nhập -->
+                <div id="id01" class="modal">
+
+                    <div class="modal-content animate">
+
+
+                        <div class="container">
+                            <label for="uname"><b>Tài khoản</b></label>
+                            <input id="txt-tai-khoan" type="text" placeholder="Nhập tài khoản" name="uname" required>
+
+                            <label for="psw"><b>Mật khẩu</b></label>
+                            <input id="txt-mat-khau" type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                            <button type="submit" onclick="login();">Đăng nhập</button>
+                            <label>
+                          <input type="checkbox" checked="checked" name="remember"> Nhớ đăng nhập
+                        </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button>
+                            <span class="psw">Quên <a href="#">mật khẩu?</a></span>
+                        </div>
+                        </form>
+                    </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="header_top">
+
+                    <div class="cart">
+                        <p>Chào mừng đến với của hàng<span>Giỏ hàng:</span>
+                            <div id="dd" class="wrapper-dropdown-2">
+                                <p id="soluong">
+                                    0 sản phẩm(s) - đ0.00
+                                </p>
+                                <ul class="dropdown">
+                                    <li id="cart">
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </p>
+                    </div>
+                    <script type="text/javascript">
+                        function DropDown(el) {
+                            this.dd = el;
+                            this.initEvents();
+                        }
+                        DropDown.prototype = {
+                            initEvents: function() {
+                                var obj = this;
+
+                                obj.dd.on('click', function(event) {
+                                    $(this).toggleClass('active');
+                                    event.stopPropagation();
+                                });
+                            }
+                        }
+
+                        $(function() {
+
+                            var dd = new DropDown($('#dd'));
+
+                            $(document).click(function() {
+                                // all dropdowns
+                                $('.wrapper-dropdown-2').removeClass('active');
+                            });
+
+                        });
+                    </script>
+                    <div class="clear"></div>
+                </div>
+                <div class="header_bottom">
+                    <div class="menu">
+                        <ul>
+                            <li class="active"><a href="index.html">Trang chủ</a></li>
+                            <li><a href="about.html">Về chúng tôi</a></li>
+                            <li><a href="delivery.html">Vận chuyển</a></li>
+                            <li><a href="news.html">Tin tức</a></li>
+                            <li><a href="contact.html">Liên hệ</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="search_box">
+                        <form>
+                            <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="header_slide">
+                    <div class="header_bottom_left">
+                        <div class="categories">
+                            <ul>
+                                <h3>Danh mục sản phẩm</h3>
+                                <li><a href="./listproduct.html">Điều hòa nhiệt độ</a></li>
+                                <li><a href="./listproduct.html">Máy lọc nước</a></li>
+                                <li><a href="./listproduct.html">Nồi cơm điện</a></li>
+                                <li><a href="./listproduct.html">Bếp lẩu nướng</a></li>
+                                <li><a href="./listproduct.html">Máy xay sinh tố</a></li>
+                                <li><a href="./listproduct.html">Lò vi sóng</a></li>
+                                <li><a href="./listproduct.html">Bếp từ</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header_bottom_right">
+                        <div class="slider">
+                            <div id="slider">
+                                <div id="mover">
+                                    <div id="slide-1" class="slide">
+                                        <div class="slider-img">
+                                            <a href="preview.html"><img src="images/dieu-hoa-nhat-bai-toshiba.jpg" alt="learn more" /></a>
+                                        </div>
+                                        <div class="slider-text">
+                                            <h1>Điều hòa Giảm giá<br><span>SALE</span></h1>
+                                            <h2>Giảm tới 20% OFF</h2>
+                                            <div class="features_list">
+                                                <h4>Mua ngay để nhận ưu đã lớn</h4>
+                                            </div>
+                                            <a href="preview.html" class="button">Mua ngay</a>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="slider-text">
+                                            <h1>Máy lọc nước Giảm giá<br><span>SALE</span></h1>
+                                            <h2>Giảm tới 40% OFF</h2>
+                                            <div class="features_list">
+                                                <h4>Mua ngay để nhận ưu đã lớn</h4>
+                                            </div>
+                                            <a href="preview.html" class="button">Mua ngay</a>
+                                        </div>
+                                        <div class="slider-img">
+                                            <a href="preview.html"><img src="images/maylocnuoc.jpg" alt="learn more" /></a>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="slider-img">
+                                            <a href="preview.html"><img src="images/noicomdien.jpg" alt="learn more" /></a>
+                                        </div>
+                                        <div class="slider-text">
+                                            <h1>Nồi cơm điện Giảm giá<br><span>SALE</span></h1>
+                                            <h2>Giảm tới 10% OFF</h2>
+                                            <div class="features_list">
+                                                <h4>Mua ngay để nhận ưu đã lớn</h4>
+                                            </div>
+                                            <a class="button">Mua ngay</a>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="content">
+                    <div class="content_top">
+                        <div class="heading">
+                            <h3>Sản phẩm mới</h3>
+                        </div>
+                        <div class="see">
+                            <p><a href="listproduct.html">Xem tất cả sản phẩm</a></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="section group">
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/beptudoi.webp" alt="" /></a>
+                            <h2>Bếp từ đoi Moshi </h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$620.87</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                        </div>
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/beptumoshi.webp" alt="" /></a>
+                            <h2>Bếp từ đa năng moshi </h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$899.75</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                        </div>
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/noi1.png" alt="" /></a>
+                            <h2>Nồi cơm điện moshi </h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$599.00</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/caynuocnonglanh.webp" alt="" /></a>
+                            <h2>Cây nước nóng lạnh Mutosi MD-450RO-BK </h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$679.87</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section group">
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/mang-loc-ro-mutosi-slitec-50gpd_1648201778.png.webp" alt="" /></a>
+                            <h2>Màng lọc RO Mutosi SLITEC 50GPD </h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$620.87</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                        </div>
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/loi-2_1634970791.png.webp" alt="" /></a>
+                            <h2>Lõi số 2 – OCB-GAC</h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$899.75</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                        </div>
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/loi-cto_1634970567.png.webp" alt="" /></a>
+                            <h2>Lõi số 2/3 – Lõi CTO GAC </h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$599.00</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview.html"><img src="images/3_1650339273.png.webp" alt="" /></a>
+                            <h2>Bếp gas dương Mutosi MG-69M</h2>
+                            <div class="price-details">
+                                <div class="price-number">
+                                    <p><span class="rupees">$679.87</span></p>
+                                </div>
+                                <div class="add-cart">
+                                    <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="content_bottom">
+                    <div class="heading">
+                        <h3>Sản phẩm nổi bật</h3>
+                    </div>
+                    <div class="see">
+                        <p><a href="#">Xem tất cả</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="section group">
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/bep-ga-mutosi-mg-66m-8_1639211107.png.webp" alt="" /></a>
+                        <h2>Bếp ga dương Mutosi MG-66M </h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$849.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/bep-ga-am-mutosi-2_1620902870_1626233549.png.webp" alt="" /></a>
+                        <h2>Bếp ga âm cơ Mutosi MG-56C </h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$599.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/6_1642842558.png.webp" alt="" /></a>
+                        <h2>Quạt sưởi gốm Ceramic Mutosi MCH-2200 </h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$799.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/1_1637060846.png.webp" alt="" /></a>
+                        <h2>Máy sưởi điều hòa Ceramic Mutosi MCH-2000 </h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$899.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section group">
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/z3272733099428_c0afdc036304eb0e17f0f7ea6e4f6a6d-removebg_1647675977.png.webp" alt="" /></a>
+                        <h2>Máy hút bụi cầm tay Mutosi MV-H3400 </h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$849.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/cay-nuoc-nong-lanh-tich-hop-ro-mutosi-md450-2-714-2_1612155658.png.webp" alt="" /></a>
+                        <h2>Cây nước nóng lạnh Mutosi MD-450RO</h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$599.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/untitled-1_1651216472.png.webp" alt="" /></a>
+                        <h2>Cây nước nóng lạnh Mutosi MD-203</h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$799.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview.html"><img src="images/md-200sss_1591349703.png.webp" alt="" /></a>
+                        <h2>Cây nước nóng lạnh Mutosi MD-200S </h2>
+                        <div class="price-details">
+                            <div class="price-number">
+                                <p><span class="rupees">$899.99</span></p>
+                            </div>
+                            <div class="add-cart">
+                                <h4><button class="button" onclick="addToCart()">Thêm giỏ hàng</button></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            <div class="section group">
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Thông tin</h4>
+                    <ul>
+                        <li><a href="about.html">Thông tin về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                        <li><a href="#">Tìm kiếm nâng cao</a></li>
+                        <li><a href="delivery.html">Đặt và trả hàng</a></li>
+                        <li><a href="contact.html">Liên hệ ngay</a></li>
+                    </ul>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Tại sao lại mua của chúng tôi</h4>
+                    <ul>
+                        <li><a href="about.html">Thông tin về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                        <li><a href="#">Điều khoản</a></li>
+                        <li><a href="contact.html">Bản đồ</a></li>
+                        <li><a href="#">Tìm kiếm</a></li>
+                    </ul>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Tài khoản của tôi</h4>
+                    <ul>
+                        <li><a href="contact.html">Đăng nhập</a></li>
+                        <li><a href="index.html">Giỏ hàng</a></li>
+                        <li><a href="#">Yêu thích</a></li>
+                        <li><a href="#">Tình trạng đơn haf</a></li>
+                        <li><a href="contact.html">Trợ giúp</a></li>
+                    </ul>
+                </div>
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><span>+12234546</span></li>
+                        <li><span>+1646464</span></li>
+                    </ul>
+                    <div class="social-icons">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/facebook.png" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/twitter.png" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="images/skype.png" alt="" /> </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"> <img src="images/dribbble.png" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"> <img src="images/linkedin.png" alt="" /></a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+</body>
+
+</html>

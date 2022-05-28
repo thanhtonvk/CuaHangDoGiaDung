@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Giỏ hàng</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+
+
+    <link rel="stylesheet" href="/cart/css/style.css" type="text/css" media="all" />
+
+
+    <script type="text/javascript" src="/cart/js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(c) {
+            $('.alert-close1').on('click', function(c) {
+                $('.close1').fadeOut('slow', function(c) {
+                    $('.close1').remove();
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(c) {
+            $('.alert-close2').on('click', function(c) {
+                $('.close2').fadeOut('slow', function(c) {
+                    $('.close2').remove();
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(c) {
+            $('.alert-close3').on('click', function(c) {
+                $('.close3').fadeOut('slow', function(c) {
+                    $('.close3').remove();
+                });
+            });
+        });
+    </script>
+    <!-- //Remove-Item-JavaScript -->
+
+</head>
+
+<!-- Body-Starts-Here -->
+
+<body>
+
+    <h1>Giỏ hàng</h1>
+
+    <!-- Content-Starts-Here -->
+    <div class="container">
+
+        <!-- Mainbar-Starts-Here -->
+        <div class="main-bar">
+            <div class="product">
+                <h3>Sản phẩm</h3>
+            </div>
+            <div class="quantity">
+                <h3>Số lượng</h3>
+            </div>
+            <div class="price">
+                <h3>Giá bán</h3>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- //Mainbar-Ends-Here -->
+
+        <!-- Items-Starts-Here -->
+        <div class="items">
+
+            <!-- Item1-Starts-Here -->
+            <div class="item1">
+                <div class="close1">
+                    <!-- Remove-Item -->
+                    <div class="alert-close1"> </div>
+
+                    <div class="image1">
+                        <img src="images/beptumoshi.webp" alt="item1">
+                    </div>
+                    <div class="title1">
+                        <p>Bếp từ Moshi</p>
+                    </div>
+                    <div class="quantity1">
+                        <form action="action_page.php">
+                            <input type="number" name="quantity" min="1" max="10" value="1">
+                        </form>
+                    </div>
+                    <div class="price1">
+                        <p>$ 210</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+            <!-- Item2-Starts-Here -->
+            <div class="item2">
+                <div class="close2">
+                    <!-- Remove-Item -->
+                    <div class="alert-close2"> </div>
+
+                    <div class="image2">
+                        <img src="images/1_1637060846.png.webp" alt="item2">
+                    </div>
+                    <div class="title2">
+                        <p>Điều hòa sưởi ấm Moshi</p>
+                    </div>
+                    <div class="quantity2">
+                        <form action="action_page.php">
+                            <input type="number" name="quantity" min="1" max="10" value="1">
+                        </form>
+                    </div>
+                    <div class="price2">
+                        <p>$ 545</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+            <!-- Item3-Starts-Here -->
+            <div class="item3">
+                <div class="close3">
+                    <!-- Remove-Item -->
+                    <div class="alert-close3"> </div>
+
+                    <div class="image3">
+                        <img src="images/bep-ga-am-mutosi-2_1620902870_1626233549.png.webp" alt="item3">
+                    </div>
+                    <div class="title3">
+                        <p>Bếp ga đôi Moshi</p>
+                    </div>
+                    <div class="quantity3">
+                        <form action="action_page.php">
+                            <input type="number" name="quantity" min="1" max="10" value="1">
+                        </form>
+                    </div>
+                    <div class="price3">
+                        <p>$ 169</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- Total-Price-Starts-Here -->
+        <div class="total">
+            <div class="total1">Tổng thanh toán</div>
+            <div class="total2">$ 924</div>
+            <div class="clear"></div>
+        </div>
+
+
+        <!-- Checkout-Starts-Here -->
+        <div class="checkout">
+            <div class="discount">
+                <span>Mã giảm giá</span> <input type="text">
+            </div>
+
+            <div class="checkout-btn">
+                <a href="#">Đặt hàng</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+    </div>
+    <!-- Content-Ends-Here -->
+</body>
+<!-- Body-Ends-Here -->
+
+</html>
